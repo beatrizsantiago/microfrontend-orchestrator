@@ -16,5 +16,8 @@ const applications = constructApplications({
 const layoutEngine = constructLayoutEngine({ routes, applications });
 
 applications.forEach(registerApplication);
-layoutEngine.activate();
-start();
+
+System.import("@bytebank/styleguide").then(() => {
+  layoutEngine.activate();
+  start();
+});

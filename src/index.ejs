@@ -1,10 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
     <title>Bytebank Microfrontend</title>
+
+    <% if (isLocal) { %>
+    <link rel="icon" type="image/x-icon" href="//localhost:9000/favicon.ico">
+    <% } %>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
     <!--
       Remove this if you only support browsers that support async/await.
@@ -57,7 +66,8 @@
       {
         "imports": {
           "@bytebank/root-config": "//localhost:9000/bytebank-root-config.js",
-          "@bytebank/panel": "//localhost:8081/bytebank-panel.js"
+          "@bytebank/styleguide": "//localhost:8081/bytebank-styleguide.js",
+          "@bytebank/panel": "//localhost:8082/bytebank-panel.js"
         }
       }
     </script>
@@ -84,6 +94,7 @@
     <noscript>Você precisa habilitar o javascript para rodar essa aplicação</noscript>
     <script>
       System.import("@bytebank/root-config");
+      System.import("@bytebank/styleguide");
     </script>
     <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
   </body>
