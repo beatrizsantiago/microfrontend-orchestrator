@@ -67,19 +67,13 @@
         "imports": {
           "@bytebank/root-config": "//localhost:9000/bytebank-root-config.js",
           "@bytebank/styleguide": "//localhost:8081/bytebank-styleguide.js",
-          "@bytebank/panel": "//localhost:8082/bytebank-panel.js"
+          "@bytebank/panel": "//localhost:8082/bytebank-panel.js",
+          "@bytebank/landing": "//localhost:8083/bytebank-landing.js"
         }
       }
     </script>
     <% } %>
     
-    <!-- "landing-angular": "//localhost:4200/main.js" -->
-
-    <!--
-      If you need to support Angular applications, uncomment the script tag below to ensure only one instance of ZoneJS is loaded
-      Learn more about why at https://single-spa.js.org/docs/ecosystem-angular/#zonejs
-    -->
-    <script src="https://cdn.jsdelivr.net/npm/zone.js@0.11.3/dist/zone.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script>
     <% if (isLocal) { %>
