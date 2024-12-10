@@ -16,7 +16,7 @@ module.exports = (webpackConfigEnv, argv) => {
 
   return merge(defaultConfig, {
     output: {
-      filename: "[name].[contenthash].js",
+      filename: "[name].js",
     },
     optimization: {
       minimize: argv.mode === "production", // Habilita minimização em modo produção
