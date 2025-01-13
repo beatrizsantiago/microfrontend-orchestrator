@@ -1,6 +1,7 @@
 const { merge } = require("webpack-merge");
 const singleSpaDefaults = require("webpack-config-single-spa");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { meta } = require("@babel/eslint-parser");
 
 module.exports = (webpackConfigEnv, argv) => {
   const orgName = "bytebank";
@@ -9,7 +10,7 @@ module.exports = (webpackConfigEnv, argv) => {
     projectName: "root-config",
     webpackConfigEnv,
     argv,
-    disableHtmlGeneration: true,
+    disableHtmlGeneration: true
   });
 
   return merge(defaultConfig, {
@@ -20,7 +21,7 @@ module.exports = (webpackConfigEnv, argv) => {
         templateParameters: {
           isLocal: webpackConfigEnv && webpackConfigEnv.isLocal,
           orgName,
-        },
+        }
       }),
     ],
   });
